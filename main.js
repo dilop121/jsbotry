@@ -25,8 +25,8 @@ nandha.help((message) => {
 })
 
 
-bot.launch();
+nandha.launch();
 
 // Enable graceful stop
-process.once('SIGINT', () => bot.stop('SIGINT'));
-process.once('SIGTERM', () => bot.stop('SIGTERM'));
+process.once('SIGINT', () => nandha.stop('SIGINT'));
+process.once('SIGTERM', () => nandha.stop('SIGTERM'));
