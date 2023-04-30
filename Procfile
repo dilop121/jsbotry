@@ -1,1 +1,1 @@
-worker: node Nandha
+worker: node main.js
