@@ -3,9 +3,9 @@
   "name": "NandhaxD",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "Nandha",
   "scripts": {
-    "start": "node main.js",
+    "start": "node Nandha",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": ["telegram-bot", "nodejs", "telegraf", "telegraf-bot"],
