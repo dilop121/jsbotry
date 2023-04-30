@@ -9,7 +9,7 @@ const Telegraf = require('telegraf');
 
 const config = require('./config');
 
-const nandha = new Telegraf(config.BOT_TOKEN);
+const nandha = Telegraf(config.BOT_TOKEN);
 
 
 
