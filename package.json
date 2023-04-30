@@ -3,13 +3,13 @@
   "name": "NandhaxD",
   "version": "1.0.0",
   "description": "",
-  "main": "Nandha",
+  "main": "main.js",
   "scripts": {
-    "start": "node Nandha",
+    "start": "node main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": ["telegram-bot", "nodejs", "telegraf", "telegraf-bot"],
-  "author": "Nandha",
+  "author": "NandhaxD",
   "license": "ISC",
   "dependencies": {
     "@types/node": "^18.0.6",
