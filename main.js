@@ -16,10 +16,13 @@ const nandha = new Telegraf(config.BOT_TOKEN);
 
 nandha.command("start", async (message) => {
         const name = message.from.first_name
-	await message.replyWithAnimation(
+	try { await message.replyWithAnimation(
             { url: "https://graph.org/file/14b56501d51e1ad420a9d.mp4" },
             { caption: config.START_TEXT }
-        );
+              );
+        } catch (err) {
+           await message.reply(`Error: ${err}`)
+        }
 });
 
 
@@ -34,6 +37,7 @@ nandha.help(async (message) => {
 
 
 nandha.launch();
+console.log("=> Bot has been launched!")
 
 // Enable graceful stop
 process.once('SIGINT', () => nandha.stop('SIGINT'));
