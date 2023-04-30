@@ -1,5 +1,8 @@
 
-// This Repository made by @NandhaBots
+```
+This Repository made by @NandhaBots
+were kindly asking please support us
+```
 
 
 const Telegraf = require('telegraf');
