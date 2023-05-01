@@ -20,7 +20,7 @@ nandha.command("start", async (message) => {
 	try { await message.replyWithAnimation(
             { url: "https://graph.org/file/14b56501d51e1ad420a9d.mp4" },
             { caption: config.START_TEXT,
-              reply_to_message_id: = message_id }
+              reply_to_message_id: message_id }
               );
         } catch (err) {
            await message.reply(`Error: ${err}`)
