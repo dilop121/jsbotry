@@ -31,8 +31,8 @@ nandha.command("start", async (message) => {
 nandha.help(async (message) => {
     const name = message.from.first_name
     const message_id = message.message_id
-    await message.reply(
-      `Hello ${name} We are continuously updating this Bot to add more futures in the near future.`
+    await nandha.sendMessage(
+      text: `Hello ${name} We are continuously updating this Bot to add more futures in the near future.`
       , { reply_to_message_id: message_id }
     );
 });
