@@ -27,10 +27,11 @@ nandha.command("start", async (message) => {
         }
 });
 
+
 nandha.help(async (message) => {
     const name = message.from.first_name
     const message_id = message.message_id
-    await message.sendMessage(
+    await message.reply(
       { text: `Hello ${name} We are continuously updating this Bot to add more futures in the near future.`
         , reply_to_message_id: message_id }
     );
@@ -41,6 +42,7 @@ nandha.help(async (message) => {
 
 nandha.launch();
 console.log("=> Bot has been launched!")
+nandha.sendMessage(chat_id: config.SUPPORT_CHAT, text: "Alive!")
 
 // Enable graceful stop
 process.once('SIGINT', () => nandha.stop('SIGINT'));
