@@ -4,6 +4,9 @@
 // kindly asking support us
 
 
+
+
+
 const config = require('./config');
 
 
@@ -13,7 +16,6 @@ const nandha = new Telegraf(config.BOT_TOKEN);
 
 
 module.exports = {nandha}; // for import this nandha to all modules/*
-export * from './modules'; // for import all modules in /modules
 
 
 nandha.command("start", async (ctx) => {
@@ -40,7 +42,6 @@ nandha.help(async (ctx) => {
 
 
 
-
 nandha.launch();
 console.log("=> GABIMARU-BOT has been Launched!")
 
@@ -48,3 +49,7 @@ console.log("=> GABIMARU-BOT has been Launched!")
 // Enable graceful stop
 process.once('SIGINT', () => nandha.stop('SIGINT'));
 process.once('SIGTERM', () => nandha.stop('SIGTERM'));
+
+
+export * from './modules'; 
+
