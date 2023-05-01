@@ -47,4 +47,5 @@ process.once('SIGINT', () => nandha.stop('SIGINT'));
 process.once('SIGTERM', () => nandha.stop('SIGTERM'));
 
 
+const { info } = require('./modules')
 
