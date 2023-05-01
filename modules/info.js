@@ -1,8 +1,10 @@
-// test
 
 
+const config = require('./config');
 
-const { nandha } = require('./main');
+
+const { Telegraf } = require("telegraf")
+const nandha = new Telegraf(config.BOT_TOKEN);
 
 
 nandha.ok(async (ctx) => {   
