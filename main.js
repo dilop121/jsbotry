@@ -40,7 +40,7 @@ nandha.help(async (ctx) => {
 
 
 nandha.launch();
-console.log("=> Bot has been launched!")
+console.log("=> GABIMARU-BOT has been Launched!")
 
 
 // Enable graceful stop
