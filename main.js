@@ -42,7 +42,8 @@ nandha.help(async (message) => {
 
 nandha.launch();
 console.log("=> Bot has been launched!")
-nandha.telegram.sendMessage(text: "Alive!", chat_id: config.SUPPORT_CHAT);
+nandha.telegram.sendMessage({ text: "Alive!", {chat_id: config.SUPPORT_CHAT}
+});
 
 // Enable graceful stop
 process.once('SIGINT', () => nandha.stop('SIGINT'));
