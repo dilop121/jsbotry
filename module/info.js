@@ -7,10 +7,12 @@ const { Telegraf } = require("telegraf")
 const nandha = new Telegraf(config.BOT_TOKEN);
 
 
-nandha.on(async (ctx) => {   
+// If you send /info bot reply: "your info"
+
+nandha.info(async (ctx) => {   
      const message_id = ctx.message.message_id;
      await ctx.reply(
-          {text: 'yes?', reply_to_message_id: message_id}
+          {text: 'your info', reply_to_message_id: message_id}
 );
 });
     
