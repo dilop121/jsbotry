@@ -14,6 +14,8 @@ const { Telegraf } = require("telegraf")
 const nandha = new Telegraf(config.BOT_TOKEN);
 
 
+const info = require('./modules/info');
+
 nandha.command("start", async (ctx) => {
         const message_id = ctx.message.message_id // alternative can use `const` as `var`
 	try { await ctx.replyWithAnimation(
