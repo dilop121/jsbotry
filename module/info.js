@@ -1,18 +1,18 @@
+function infouser(nandha) {
+     nandha.command('sticker', ctx => {
+         ctx.reply("ctx");
+         let inputText = ctx.message.text;
+         let arr = inputText.split(" "); // convert string to array
+         arr.shift(); // remove first element of array
+         inputText = arr.join(" "); // convert array back to string
+         console.log(inputText); // output: "I am fine"
 
-
-const config = require('./config');
-
-
-const { Telegraf } = require("telegraf")
-const nandha = new Telegraf(config.BOT_TOKEN);
-
-
-// If you send /info bot reply: "your info"
-
-nandha.info(async (ctx) => {   
-     const message_id = ctx.message.message_id;
-     await ctx.reply(
-          {text: 'your info', reply_to_message_id: message_id}
-);
-});
-    
+     });
+ }
+ 
+ function lmao(x) {
+     console.log(x);
+ }
+ 
+ module.exports = (nandha) => ({ infouser: () => infouser(nandha), lmao }); 
+ 
