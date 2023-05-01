@@ -51,5 +51,4 @@ process.once('SIGINT', () => nandha.stop('SIGINT'));
 process.once('SIGTERM', () => nandha.stop('SIGTERM'));
 
 
-export * from './modules'; 
 
