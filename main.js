@@ -15,7 +15,6 @@ const nandha = new Telegraf(config.BOT_TOKEN);
 
 
 nandha.command("start", async (ctx) => {
-        const mention = `[${ctx.from.first_name}](tg://openmessage?id=${message.from.id})`;
         const message_id = ctx.message.message_id // alternative can use `const` as `var`
 	try { await ctx.replyWithAnimation(
             { url: "https://graph.org/file/14b56501d51e1ad420a9d.mp4" },
