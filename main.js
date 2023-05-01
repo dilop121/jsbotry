@@ -4,13 +4,10 @@
 // kindly asking support us
 
 
+const config = require('./config');
 
 
 const { Telegraf } = require("telegraf")
-
-
-
-const config = require('./config');
 const nandha = new Telegraf(config.BOT_TOKEN);
 
 
