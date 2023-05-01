@@ -13,6 +13,7 @@ const nandha = new Telegraf(config.BOT_TOKEN);
 
 
 module.exports = {nandha}; // for import this nandha to all modules/*
+exports * from './modules'; // for import all modules in /modules
 
 
 nandha.command("start", async (ctx) => {
