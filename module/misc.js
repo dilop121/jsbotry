@@ -9,8 +9,9 @@ function get_id(nandha) {
           let user_id = ctx.message.from.id;
           let chat_id = ctx.chat.id;
           let message_id = ctx.message.message_id;
+          let replies;
 
-          try { let replies = ctx.message.reply_to_message;
+          try { replies = ctx.message.reply_to_message;
           } catch (error) {
              // Handle or pass the error here
           }
