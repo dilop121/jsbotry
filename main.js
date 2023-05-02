@@ -25,8 +25,8 @@ nandha.command("json", async (ctx) => {
       fs.writeFileSync("json.txt", text);
       try {
            return await ctx.replyWithDocument(
-        { source: "json.txt", filename: "json.txt", 
-           reply_to_message_id: ctx.message.id });
+        { source: "json.txt", filename: "json.txt"}, 
+           { reply_to_message_id: ctx.message.id });
       } catch (error) {
           return await ctx.reply(error.toString());
       }
