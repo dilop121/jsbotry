@@ -16,8 +16,12 @@ lmao("bye")
 nandha.command("json", async (ctx) => {
       let text = JSON.stringify(ctx);
       fs.writeFileSync("json.txt", text);
-      return await ctx.replyWithDocument(
+      try {
+           return await ctx.replyWithDocument(
         { source: "json.txt", filename: "json.txt" } );
+      } catch (error) {
+          return await ctx.reply(error.toString());
+      }
       fs.unlinkSync("json.txt");
 
 });
