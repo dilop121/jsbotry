@@ -7,9 +7,10 @@ const nandha = new Telegraf(config.BOT_TOKEN);
 const fs = require('fs');
 
 
-const { getjson } = require('./module/getjson.js')(nandha); // pass nandha as parameter
+const { getjson, get_id } = require('./module/misc.js')(nandha); // pass nandha as parameter
 
-getjson();
+get_json();
+get_id();
 
 
 
