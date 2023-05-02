@@ -13,7 +13,7 @@ lmao("bye")
 
 
 nandha.command("json", async (ctx) => {
-      await ctx.reply(ctx.toString());
+      await ctx.reply(JSON.stringify(ctx));
 });
 
 
