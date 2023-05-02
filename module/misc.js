@@ -16,8 +16,10 @@ function get_id(nandha) {
              // Handle or pass the error here
           }
           
-          if ( Boolean(replies) ) {
-                   return ctx.reply({ text: `Your telegram I'd: ${user_id}\nMessage Chat I'd: ${chat_id}\nUser telegram I'd: ${replies.from.id}`,
+          if (replies) {
+               return ctx.reply({ text: `Your telegram I'd: ${user_id}\n
+                                Message Chat I'd: ${chat_id}\n
+                                User telegram I'd: ${replies.from.id}`,
                       reply_to_message_id: message_id });
           } else {
                return ctx.reply({ text: `Your telegram I'd: ${user_id}\nMessage Chat I'd: ${chat_id}`,
