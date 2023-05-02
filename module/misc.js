@@ -58,6 +58,6 @@ function get_json(nandha) {
 
 module.exports = (nandha) => ({ 
      get_json: () => get_json(nandha), 
-     get_json: () => get_json(nandha)
+     get_id: () => get_id(nandha)
  }); 
  
