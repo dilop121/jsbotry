@@ -22,6 +22,21 @@ const { infouser, lmao } = require('./module/info.js')(nandha); // pass nandha a
 infouser();
 lmao("bye")
 
+
+
+nandha.command('logs', (ctx) => {
+  // Read the log file
+  fs.readFile('example.log', (err, data) => {
+    if (err) {
+      console.error(err);
+    } else {
+      // Send the log file to the chat
+      ctx.replyWithDocument({ source: data, filename: 'example.log' });
+    }
+  });
+});
+
+
 nandha.command("start", async (ctx) => {
     const message_id = ctx.message.message_id;
     try {
