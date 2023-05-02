@@ -31,7 +31,7 @@ lmao("bye")
 
 
 
-bot.command('logs', (ctx) => {
+nandha.command('logs', (ctx) => {
   // read the logs.txt file and send it as a document
   const document = fs.readFileSync('logs.txt');
   ctx.replyWithDocument({ source: document, filename: 'logs.txt' });
