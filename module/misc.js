@@ -10,9 +10,9 @@ function get_id(nandha) {
           let chat_id = ctx.chat.id;
           let message_id = ctx.message.message_id;
 
-          try { let replies = ctx.message.reply_to_message 
+          try { let replies = ctx.message.reply_to_message;
           } catch (error) {
-             // no code for passing the error
+             // Handle or pass the error here
           }
           
           if ( Boolean(replies) ) {
@@ -54,7 +54,10 @@ function get_json(nandha) {
 
 
 
-module.exports = {
-  get_json: nandha => get_json(nandha),
-  get_id: nandha => get_id(nandha)
-};
+
+
+module.exports = (nandha) => ({ 
+     get_json: () => get_json(nandha), 
+     get_json: () => get_json(nandha)
+ }); 
+ 
