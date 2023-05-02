@@ -37,7 +37,7 @@ nandha.command('logs', (ctx) => {
       const document = fs.readFileSync('logs.txt');
       ctx.replyWithDocument({ source: document, filename: 'logs.txt' });
   } catch (error) {
-      return await ctx.reply(error.toString) 
+      return await ctx.reply(error.toString()) 
   }
 });
 
