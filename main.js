@@ -12,17 +12,11 @@ infouser();
 lmao("bye")
 
 
-
-nandha.command("name", async (ctx) => {
-     let text = ctx.message.text;
-     if (text.split(" ").length == 2) {
-          let name = text.split(" ")[1];
-          return await ctx.reply(`Your name is **${name}**`,
-             {"parse_mode": "MarkdownV2"});
-     } else { 
-        return await ctx.reply("Enter your name baka!");
-     }
+nandha.command("json", async (ctx) => {
+      await ctx.reply(ctx.toString());
 });
+
+
 
 
 nandha.command("start", async (ctx) => {
