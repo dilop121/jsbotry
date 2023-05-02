@@ -2,15 +2,20 @@
 
 
 
-var logging = require('py-logging');
+const winston = require('winston');
 
+const logger = winston.createLogger({
+  level: 'info',
+  format: winston.format.combine(
+    winston.format.timestamp(),
+    winston.format.printf(info => `[Katsuki] ${info.timestamp} ${info.level}: ${info.message}`)
+  ),
+  transports: [
+    new winston.transports.File({ filename: 'logs.txt' }),
+    new winston.transports.Console()
+  ]
+});
 
-logging.basicConfig({
-    filename: 'example.log',
-    format: '%(asctime) - %(levelname) - %(message)',
-    timeFormat: '%ISO',
-    level: 'DEBUG'
-}); 
 
 
 const config = require('./config');
@@ -26,16 +31,10 @@ lmao("bye")
 
 
 
-nandha.command('logs', (ctx) => {
-  // Read the log file
-  fs.readFile('example.log', (err, data) => {
-    if (err) {
-       ctx.reply(err.toString());
-    } else {
-      // Send the log file to the chat
-      ctx.replyWithDocument({ source: data, filename: 'example.log' });
-    }
-  });
+bot.command('logs', (ctx) => {
+  // read the logs.txt file and send it as a document
+  const document = fs.readFileSync('logs.txt');
+  ctx.replyWithDocument({ source: document, filename: 'logs.txt' });
 });
 
 
