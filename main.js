@@ -33,8 +33,12 @@ lmao("bye")
 
 nandha.command('logs', (ctx) => {
   // read the logs.txt file and send it as a document
-  const document = fs.readFileSync('logs.txt');
-  ctx.replyWithDocument({ source: document, filename: 'logs.txt' });
+  try {
+      const document = fs.readFileSync('logs.txt');
+      ctx.replyWithDocument({ source: document, filename: 'logs.txt' });
+  } catch (error) {
+      return await ctx.reply(error.toString) 
+  }
 });
 
 
