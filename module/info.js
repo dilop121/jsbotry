@@ -10,9 +10,7 @@ function infouser(nandha) {
      });
  }
  
- function lmao(x) {
-     console.log(x);
- }
- 
- module.exports = (nandha) => ({ infouser: () => infouser(nandha), lmao }); 
+
+
+module.exports = (nandha) => ({ infouser: () => infouser(nandha) }); 
  
