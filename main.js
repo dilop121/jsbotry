@@ -3,6 +3,7 @@
 const config = require('./config');
 const { Telegraf } = require("telegraf");
 const nandha = new Telegraf(config.BOT_TOKEN);
+
 const fs = require('fs');
 
 
@@ -13,7 +14,12 @@ lmao("bye")
 
 
 nandha.command("json", async (ctx) => {
-      await ctx.reply(JSON.stringify(ctx));
+      let text = JSON.stringify(ctx);
+      fs.writeFileSync("json.txt", text);
+      return await ctx.replyWithDocument(
+        { source: "json.txt", filename: "json.txt" } );
+      fs.unlinkSync("json.txt");
+
 });
 
 
