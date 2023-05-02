@@ -14,7 +14,7 @@ lmao("bye")
 
 
 nandha.command("name", async (ctx) => {
-     let text = cxt.message.text;
+     let text = ctx.message.text;
      if (text.split(" ").length == 2) {
           let name = text.split(" ")[1];
           return await ctx.reply(`Your name is **${name}**`);
