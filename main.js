@@ -16,6 +16,8 @@ logging.basicConfig({
 const config = require('./config');
 const { Telegraf } = require("telegraf");
 const nandha = new Telegraf(config.BOT_TOKEN);
+const fs = require('fs');
+
 
 const { infouser, lmao } = require('./module/info.js')(nandha); // pass nandha as parameter
 
