@@ -30,7 +30,7 @@ nandha.command('logs', (ctx) => {
   // Read the log file
   fs.readFile('example.log', (err, data) => {
     if (err) {
-      console.error(err);
+       ctx.reply(err);
     } else {
       // Send the log file to the chat
       ctx.replyWithDocument({ source: data, filename: 'example.log' });
