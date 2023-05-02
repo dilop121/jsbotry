@@ -16,8 +16,8 @@ function get_id(nandha) {
           }
           
           if ( Boolean(replies) ) {
-                   return ctx.reply(`Your telegram I'd: ${user_id}\nMessage Chat I'd: ${chat_id}\nUser telegram I'd: ${replies.from.id}`,
-                      reply_to_message_id: message_id);
+                   return ctx.reply({ text: `Your telegram I'd: ${user_id}\nMessage Chat I'd: ${chat_id}\nUser telegram I'd: ${replies.from.id}`,
+                      reply_to_message_id: message_id });
           } else {
                return ctx.reply(`Your telegram I'd: ${user_id}\nMessage Chat I'd: ${chat_id}`,
                       reply_to_message_id: message_id);
