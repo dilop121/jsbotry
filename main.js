@@ -1,6 +1,18 @@
 //This repo is owned by t.me/Nandhabots if u ever copy or use it, kindly give us credits and Thanks for using this repo 
 
 
+
+var logging = require('py-logging');
+
+
+logging.basicConfig({
+    filename: 'example.log',
+    format: '%(asctime) - %(levelname) - %(message)',
+    timeFormat: '%ISO',
+    level: 'DEBUG'
+}); 
+
+
 const config = require('./config');
 const { Telegraf } = require("telegraf");
 const nandha = new Telegraf(config.BOT_TOKEN);
