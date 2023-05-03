@@ -11,7 +11,7 @@ function get_id(nandha) {
           let message_id = ctx.message.message_id;
           let replies = ctx.message.reply_to_message
        
-          const text = `Your telegram I'd: ${user_id}\nChat I'd: ${chat_id}`
+          let text = `Your telegram I'd: ${user_id}\nChat I'd: ${chat_id}`
           
           if (replies) {
                text += `\nUser telegram I'd: ${replies.from.id}`
