@@ -15,7 +15,7 @@ function get_id(nandha) {
           
           if (replies) {
                text += `\nUser telegram I'd: ${replies.from.id}`
-               return ctx.reply({ text: text
+               return ctx.reply({ text: text,
                       reply_to_message_id: message_id });
           } else {
                return ctx.reply({ text: text,
