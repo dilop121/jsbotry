@@ -17,10 +17,10 @@ function get_id(nandha) {
           if (replies) {
                
                if (forward_from_chat) {
-                   text += `\nUser telegram I'd: ${${forward_from_chat.title}`}`;
+                   text += `\nUser telegram I'd: ${forward_from_chat.title}`;
                    text += `\nForward Chat I'd: ${forward_from_chat.title}`;
                } else {
-                   text += `\nUser telegram I'd: ${${forward_from_chat.title}`}`;
+                   text += `\nUser telegram I'd: ${forward_from_chat.title}`;
                }
                return ctx.reply({ text: text,
                       reply_to_message_id: message_id });
