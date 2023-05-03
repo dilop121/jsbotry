@@ -9,18 +9,16 @@ function get_id(nandha) {
           let user_id = ctx.message.from.id;
           let chat_id = ctx.chat.id;
           let message_id = ctx.message.message_id;
-          let replies;
-
-          try { replies = ctx.message.reply_to_message;
-          } catch (error) {
-             // Handle or pass the error here
-          }
+          let replies = ctx.message.reply_to_message
+       
+          const text = `Your telegram I'd: ${user_id}\nChat I'd: ${chat_id}`
           
           if (replies) {
-               return ctx.reply({ text: `Your telegram I'd: ${user_id}\nMessage Chat I'd: ${chat_id}\nUser telegram I'd: ${replies.from.id}`,
+               text += `\nUser telegram I'd: ${replies.from.id}`
+               return ctx.reply({ text: text
                       reply_to_message_id: message_id });
           } else {
-               return ctx.reply({ text: `Your telegram I'd: ${user_id}\nMessage Chat I'd: ${chat_id}`,
+               return ctx.reply({ text: text,
                       reply_to_message_id: message_id });
           }
 
