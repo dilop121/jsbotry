@@ -14,7 +14,7 @@ function information(nandha) {
 
     } catch (error) {
           return await ctx.reply({ text: error.toString(),
-               reply_to_message_id: message_id });
+               reply_to_message_id: messageId });
     }
   });
 }
