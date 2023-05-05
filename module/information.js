@@ -1,12 +1,12 @@
 
 
 
-string = ```\n
+string = `\n
   ( USER INFORMATION )
 📛 Name: {name}
 🆔 I'd: {id}
 👁️ Username: {username}
-```
+`;
 
 
 
