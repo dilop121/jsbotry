@@ -2,7 +2,8 @@
 
 
 string = `\n
-  ( USER INFORMATION )
+     ( USER INFORMATION )
+
 📛 Name: {name}
 🆔 I'd: {id}
 👁️ Username: {username}
