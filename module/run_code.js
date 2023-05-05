@@ -4,13 +4,6 @@
 const fetch = require('node-fetch');
  
 
-const language = "py";
-const code = "print('hello')";
-fetch(https://codex-rest.onrender.com/?language=${language}&code=${code})
-  .then(response => response.json())
-  .then(data => console.log(data));
-
-
 
 function run_code(nandha) {
      nandha.command("run", async (ctx) => {
