@@ -19,7 +19,7 @@ function information(nandha) {
     let messageId = ctx.message.message_id;
     if ( ctx.chat.type == "supergroup" ) {
         const status = (await ctx.getChatMember(userId)).status;
-        string += "\n👾 Status: ${status}";
+        string += `\n👾 Status: ${status}`;
     }
 
     let text = string.replace("{name}", FirstName).replace("{id}", userId).replace("{username}", UserName);
