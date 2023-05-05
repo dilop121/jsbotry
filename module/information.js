@@ -9,7 +9,7 @@ function information(nandha) {
     try {
       let photos = await nandha.telegram.getUserProfilePhotos(userId);
       const fileId = photos.photos[0][photos.photos[0].length - 1].file_id;
-      await ctx.replyWithPhoto({ file_id: fileId });
+      await ctx.replyWithPhoto({ file_id: JSON.stringify(fileId) });
     } catch (error) {
       console.log(error);
     }
