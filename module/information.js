@@ -7,11 +7,13 @@ function information(nandha) {
     let userId = ctx.message.from.id;
     let messageId = ctx.message.message_id;
     try {
-      let photos = await nandha.telegram.getUserProfilePhotos(userId);
-      const fileId = photos.photos[0][photos.photos[0].length - 1].file_id;
-      await ctx.replyWithPhoto({ file_id: JSON.stringify(fileId) });
+      const user = await nandha.telegram.getUserProfilePhotos(userId);
+      const fileId = user.photos.[0][0].file_id;
+      return await ctx.replyWithPhoto(file_id: fileId,
+            {reply_to_message_id: message_id});
     } catch (error) {
-      console.log(error);
+      return await ctx.reply({ text: error.toString(),
+          reply_to_message_id: message_id });
     }
   });
 }
