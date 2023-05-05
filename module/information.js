@@ -20,7 +20,7 @@ function information(nandha) {
        
       const User = await nandha.telegram.getUserProfilePhotos(userId);
       const fileId = User.photos[0][0].file_id;
-      let caption = string.replace("{name}, FirstName).replace("{id}", userId).replace("{username}", UserName)
+      let caption = string.replace("{name}", FirstName).replace("{id}", userId).replace("{username}", UserName)
       return await ctx.replyWithPhoto(fileId, {caption: caption, reply_to_message_id: messageId});
 
     } catch (error) {
