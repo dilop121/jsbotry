@@ -7,6 +7,9 @@ function run_code(nandha) {
           const text = ctx.message.text;
           var lang_code = ["py","java","js","go"];
           let SplitString = text.split(" ");
+
+          let language;
+          let code;
           try {
              let code = SplitString.slice(2).join(' ');
              let language = SplitString[1];
