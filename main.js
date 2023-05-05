@@ -9,11 +9,12 @@ const fs = require('fs');
 
 const { get_json, get_id } = require('./module/misc.js')(nandha);
 const { information } = require('./module/information.js')(nandha); 
-
+const { run_code } = require('./module/run_code.js')(nandha);
 
 get_json();
 get_id();
 information();
+run_code();
 
 
 
