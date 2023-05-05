@@ -1,13 +1,6 @@
 
 
 
-string = `\n
-        ( USER INFORMATION )
-
-📛 Name: {name}
-🆔 I'd: {id}
-👁️ Username: {username}
-`;
 
 
 
@@ -17,6 +10,14 @@ function information(nandha) {
     let FirstName = ctx.message.from.first_name;
     let UserName = ctx.message.from.username;
     let messageId = ctx.message.message_id;
+    let string = `\n
+        ( USER INFORMATION )
+
+📛 Name: {name}
+🆔 I'd: {id}
+👁️ Username: {username}
+`;
+
     if ( ctx.chat.type == "supergroup" ) {
         const status = (await ctx.getChatMember(userId)).status;
         string += `\n👾 Status: ${status}`;
