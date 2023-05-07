@@ -20,7 +20,7 @@ function run_code(nandha) {
           let language = "py";
           let code = "print('hello')";
          
-          response = fetch(`https://codex-rest.onrender.com/?language=${language}&code=${code}`); 
+          response = fetch(`https://codex-rest.onrender.com/?language=${language}&code=${code}`) 
           .then(response => response.json())
           .then(data => return ctx.reply(data.toString()));
           .catch(error => return ctx.reply(error.toString());
