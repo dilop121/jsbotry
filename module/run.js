@@ -45,17 +45,22 @@ async function run_code(nandha) {
         const response = await axios(config);
         if ( response.data.output ) {
              let string = `\n
-💻 language: ${response.data.info}
-💻 code: ${code}
+➤ language: ${response.data.info}
+➤ Input: \n${code}
 
-🖥️ Result: ${response.data.output}`;
+➤ Output: \n${response.data.output}`;
              return await ctx.reply(string);
         } else {
-           return await ctx.reply(response.data.error);
+           let string = `\n
+➤ language: ${response.data.info}
+➤ Input: \n${code}
+
+➤ Output: \n${response.data.error}`;
+           return await ctx.reply(string);
         }
                       
     } catch (error) {
-      await ctx.reply(error.toString());
+      await ctx.reply(`Error: ${error.toString()}`);
     }
   });
 }
