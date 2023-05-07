@@ -35,7 +35,7 @@ lang codes:
     
     var data = qs.stringify({
       'code': code,
-      'language': "py",
+      'language': lang,
       'input': ''
     });
 
