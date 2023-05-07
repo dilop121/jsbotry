@@ -11,7 +11,8 @@ async function run_code(nandha) {
     
     const list = ["py", "java", "go", "js"];
     
-    text = ctx.message.text
+    Let text = ctx.message.text;
+    let message_id = ctx.message.id;
     let code = "";
     let lang = "";
     try {
