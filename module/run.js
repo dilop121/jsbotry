@@ -46,14 +46,14 @@ async function run_code(nandha) {
         if ( response.data.output ) {
              let string = `\n
 ➤ language: ${response.data.info}
-➤ Input: \n${code}
+➤ Input: \n${code.trim()}
 
 ➤ Output: \n${response.data.output}`;
              return await ctx.reply(string);
         } else {
            let string = `\n
 ➤ language: ${response.data.info}
-➤ Input: \n${code}
+➤ Input: \n${code.trim()}
 
 ➤ Output: \n${response.data.error}`;
            return await ctx.reply(string);
