@@ -3,19 +3,9 @@
 
 
 
-fetch('https://jsonplaceholder.typicode.com/users')
-  .then(response => response.json())
-  .then(data => console.log(data))
-  .catch(error => console.error(error));
-
-
-
 
 function run_code(nandha) {
-     nandha.command("run", async (ctx) => {
-          const text = ctx.message.text;
-          var lang_code = ["py","java","js","go"];
-          let SplitString = text.split(" ");
+     nandha.command("run", async (ctx) => {         
 
           let language = "py";
           let code = "print('hello')";
