@@ -12,8 +12,8 @@ function run_code(nandha) {
          
           response = fetch(`https://codex-rest.onrender.com/?language=${language}&code=${code}`) 
           .then(response => response.json())
-          .then(data => return ctx.reply(data.toString()));
-          .catch(error => return ctx.reply(error.toString());
+          .then(data => await ctx.reply(data.toString()));
+          .catch(error => await ctx.reply(error.toString());
           
 
 });
