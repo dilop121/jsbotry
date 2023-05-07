@@ -2,6 +2,15 @@
 
 
 
+
+fetch('https://jsonplaceholder.typicode.com/users')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
+
+
+
+
 function run_code(nandha) {
      nandha.command("run", async (ctx) => {
           const text = ctx.message.text;
@@ -10,15 +19,12 @@ function run_code(nandha) {
 
           let language = "py";
           let code = "print('hello')";
+         
+          response = fetch(`https://codex-rest.onrender.com/?language=${language}&code=${code}`); 
+          .then(response => response.json())
+          .then(data => return ctx.reply(data.toString()));
+          .catch(error => return ctx.reply(error.toString());
           
-          try {
-              response = fetch(`https://codex-rest.onrender.com/?language=${language}&code=${code}`); 
-              const data = response.json();
-              let output = data['output'];
-          } catch (error) {
-              return ctx.reply(error.toString())
-          }
-          return ctx.reply(output);
 
 });
 
