@@ -15,7 +15,7 @@ async function run_code(nandha) {
     let code = "";
     let lang = "";
     try {
-        # code = text.split(text.slice(0, 4))[1];
+        //  code = text.split(text.slice(0, 4))[1];
         lang = text.split(text.slice(0,5))[1].split("-")[0];
         code = text.split("-")[1];
     } catch (error) {
