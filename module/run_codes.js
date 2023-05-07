@@ -19,7 +19,7 @@ async function run_code(nandha) {
         lang = text.split(text.slice(0,5))[1].split("-")[0];
         code = text.split("-")[1];
     } catch (error) {
-        return await ctx.reply(error.toString());
+        return await ctx.reply({text: error.toString(), reply_to_message_id: message_id});
     }
     
     format = `\n
@@ -30,7 +30,7 @@ lang codes:
 (js/py/go/java)
 `;
     if (!list.includes(lang)) {
-        return ctx.reply(format);
+        return ctx.reply({ text: format, reply_to_message_id: message_id});
     }
     
     var data = qs.stringify({
@@ -57,18 +57,18 @@ lang codes:
 ➤ Input: \n${code.trim()}
 
 ➤ Output: \n${response.data.output}`;
-             return await ctx.reply(string);
+             return await ctx.reply({text: string, reply_to_message_id: message_id});
         } else {
            let string = `\n
 ➤ language: ${response.data.info}
 ➤ Input: \n${code.trim()}
 
 ➤ Output: \n${response.data.error}`;
-           return await ctx.reply(string);
+           return await ctx.reply({text: string, reply_to_message_id: message_id});
         }
                       
     } catch (error) {
-      await ctx.reply(`Error: ${error.toString()}`);
+      await ctx.reply({text: `Error: ${error.toString()}`, reply_to_message_id: message_id});
     }
   });
 }
