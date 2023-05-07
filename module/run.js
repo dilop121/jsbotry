@@ -16,7 +16,7 @@ async function run_code(nandha) {
     let code = "";
     try {
         lang = text.split(" ")[1];
-        code = text.split(" ").slice(2).join(' ');
+        code = text.split(lang)[1];
     } catch (error) {
         return await ctx.reply(error.toString());
    }
