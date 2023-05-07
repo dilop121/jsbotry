@@ -12,22 +12,17 @@ async function run_code(nandha) {
     const list = ["py", "java", "go", "js"];
     
     text = ctx.message.text
-    let lang = "";
     let code = "";
     try {
-        lang = text.split(" ")[1];
-        code = text.split(lang)[1];
+        code = text.split(" ")[1];
     } catch (error) {
         return await ctx.reply(error.toString());
    }
 
-    if (!list.includes(lang)) {
-         return await ctx.reply("Enter valid language code!")
-    }
-
+    
     var data = qs.stringify({
       'code': code,
-      'language': lang,
+      'language': "py",
       'input': ''
     });
 
