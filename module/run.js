@@ -42,8 +42,18 @@ async function run_code(nandha) {
     };
 
     try {
-      const response = await axios(config);
-      await ctx.reply(response.data.output);
+        const response = await axios(config);
+        if ( response.data.output ) {
+             let string = `\n
+💻 language: ${response.data.info}
+💻 code: ${code}
+
+🖥️ Result: ${response.data.output}`;
+             return await ctx.reply(string);
+        } else {
+           return await ctx.reply(response.data.error);
+        }
+                      
     } catch (error) {
       await ctx.reply(error.toString());
     }
