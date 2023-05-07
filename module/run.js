@@ -12,9 +12,11 @@ async function run_code(nandha) {
     const list = ["py", "java", "go", "js"];
     
     text = ctx.message.text
+    let lang = "";
+    let code = "";
     try {
-        let lang = text.split(" ")[1];
-        let code = text.split(" ").slice(2).join(' ');
+        lang = text.split(" ")[1];
+        code = text.split(" ").slice(2).join(' ');
     } catch (error) {
         return await ctx.reply(error.toString());
    }
