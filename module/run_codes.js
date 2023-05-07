@@ -14,7 +14,7 @@ async function run_code(nandha) {
     text = ctx.message.text
     let code = "";
     try {
-        code = text.split(" ")[1];
+        code = text.split(text.slice(0, 4))[1];
     } catch (error) {
         return await ctx.reply(error.toString());
    }
