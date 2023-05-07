@@ -13,12 +13,25 @@ async function run_code(nandha) {
     
     text = ctx.message.text
     let code = "";
+    let lang = "";
     try {
-        code = text.split(text.slice(0, 4))[1];
+        # code = text.split(text.slice(0, 4))[1];
+        lang = text.split(text.slice(0,5))[1].split("-")[0];
+        code = text.split("-")[1];
     } catch (error) {
         return await ctx.reply(error.toString());
-   }
+    }
+    
+    format = `\n
+/run py-
+print(2828)
 
+lang codes:
+(js/py/go/java)
+`;
+    if (!list.includes(lang)) {
+        return ctx.reply(format);
+    }
     
     var data = qs.stringify({
       'code': code,
