@@ -26,7 +26,7 @@ nandha.command("start", async (ctx) => {
     let message_id = ctx.message.message_id;
     try {
         await ctx.replyWithAnimation(
-            { file_id: "AAMCBQADHQRmZMqFAAEBuehkcbFYmry94bGmC6ZDNzSk8d_c2wACVwkAAt00iVd9E3opwXnAEQEAB20AAy8E" },
+            { file_id: "CgACAgUAAx0EZmTKhQABAbnoZHGxWJq8veGxpgumQzc0pPHf3NsAAlcJAALdNIlXfRN6KcF5wBEvBA"},
             { caption: config.START_TEXT, reply_to_message_id: message_id }
         );
     } catch (err) {
