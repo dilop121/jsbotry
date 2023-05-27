@@ -1,6 +1,6 @@
 
 module.exports = {
-  BOT_TOKEN: '6081726722:AAHwkwoUlAfSYakahdf6yNBiVxLjqebNGFk', // your telegram bot token, get from @botfather
+  BOT_TOKEN: '6081726722:AAHpKNm4NbFIR9hWdloDZkCA5GC1GEFLH0o', // your telegram bot token, get from @botfather
   SUPPORT_CHAT: -1001717881477,       // your bot support chat group chat id
   START_TEXT: `Hello there! I am Gabimaru,
 your friendly anime-themed bot.
